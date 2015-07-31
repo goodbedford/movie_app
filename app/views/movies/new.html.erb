@@ -1,0 +1,16 @@
+
+ <%= form_for :movie, url:{action:"create"} do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :quote %><br>
+    <%= f.text_area :quote %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %> 

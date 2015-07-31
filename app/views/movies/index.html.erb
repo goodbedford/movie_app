@@ -1,0 +1,13 @@
+<h1>Hellow World this is the index</h1>
+
+<% @movies.each do |movie| %>
+  <div>Title: <%= movie.title %></div>
+  <div>Quote: <%= movie.quote %></div>
+  <div>
+  <%= button_to 'show', movie_path(movie), method: :get %>
+  <%= button_to 'edit', edit_movie_path(movie), method: :get %>
+  <%= button_to 'delete', movie_path(movie),
+            method: :delete,
+            data: {confirm: "are you sure?"} %>
+</div>
+<% end %>
